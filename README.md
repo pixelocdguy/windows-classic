@@ -1,15 +1,16 @@
 # windows-classic
 ### Windows Classic Inspired Theme for Linux
 
-This is a theme primarily for LXQt and inspired by Windows 2000, Melimmium Edition & Windows XP (Classic Theme).  
+This is a theme primarily for LXQt and inspired by Windows 2000, Millennium Edition & Windows XP (Classic Theme).  
 
-At this stage, a theme for LXQt, Openbox & KWin are supplied.  
+At this stage, a theme for LXQt, Openbox & KWin are supplied.  Openbox is the default LXQt Window Manager - it is fast but an exact theme is not possible. KWin is KDE's Plasma WM - it is more accurate, with better special effects, but at the cost of speed. Memory usage shouldn't be an issue due to low requirements for both.
 
 Possible future additions are:
 
 - Icon Theme
 - Cursor Theme
 - Backport to Win98 & Win95 inspired theme/s
-- Other *lightweight* desktop environments (e.g. LXDE, XFCE, etc.)
+- SDDM (default Display Manager for LXQt) theme
+- Plymouth theme (boot splash screen)
 
-I decided to make this as I couldn't find a Windows Classic based theme for LXQt, and thought this was a good match due to QT's relatively accurate built-in Windows 9x widget theme.
+This was created as there didn't appear to be a Windows Classic theme for LXQt. Additionally, due to Qt's (cross platform app framework) relatively accurate built-in Windows widget style, it seemed as waste to not take advantage of this. Regardless, it wasn't as easy as first predicted, due to peculiarities in both LXQt and Qt.
