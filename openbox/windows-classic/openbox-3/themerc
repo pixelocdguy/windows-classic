@@ -1,0 +1,170 @@
+# Background Color
+# xsetroot -solid "#3a6eaf"
+
+# Window geometry
+padding.width: 2
+padding.height: 2
+border.width: 2
+window.client.padding.width: 1
+window.client.padding.height: 1
+window.handle.width: 1
+
+#Menu geometry
+menu.border.width: 1
+menu.overlap.x: 4
+menu.overlap.y: -2
+
+# Border colors
+window.active.border.color: #d4d0c8
+window.inactive.border.color: #d4d0c8
+menu.border.color: #ffffff
+window.active.client.color: #ffffff
+window.inactive.client.color: #ffffff
+
+# Text shadows
+window.active.label.text.font: shadow=y:shadowtint=0:shadowoffset=4
+window.inactive.label.text.font: shadow=y:shadowtint=0:shadowoffset=4
+menu.items.font: shadow=n
+menu.title.text.font: shadow=n
+
+# Window title justification
+window.label.text.justify: Left
+
+# Active window
+window.active.title.bg: Gradient Horizontal Flat
+window.active.title.bg.color: #0a246a
+window.active.title.bg.colorTo: #a6caf0
+#window.active.title.bg.interlace.color: #7788cc
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #ffffff
+
+window.active.handle.bg: Solid Flat
+window.active.handle.bg.color: #404040
+#window.active.handle.bg.colorTo: #4d6982
+
+window.active.grip.bg: Solid Flat
+window.active.grip.bg.color: #808080
+#window.active.grip.bg.colorTo: #4d6982
+
+window.active.button.unpressed.bg: Raised Solid Bevel
+window.active.button.unpressed.bg.color: #d4d0c8
+#window.active.button.unpressed.bg.colorTo: #55799a
+window.active.button.unpressed.bg.border.color: #ffffff
+window.active.button.unpressed.image.color: #000000
+
+window.active.button.pressed.bg: Raised Solid Sunken
+window.active.button.pressed.bg.color: #d4d0c8
+#window.active.button.pressed.bg.colorTo: #50708e
+window.active.button.pressed.bg.border.color: #404040
+window.active.button.pressed.image.color: #000000
+
+window.active.button.disabled.bg: Raised Solid Bevel
+window.active.button.disabled.bg.color: #d4d0c8
+#window.active.button.disabled.bg.colorTo: #50708e
+window.active.button.disabled.bg.border.color: #ffffff
+window.active.button.disabled.image.color: #808080
+
+#window.active.button.hover.bg: Flat Gradient Vertical Border
+#window.active.button.hover.bg.color: #6993b9
+#window.active.button.hover.bg.colorTo: #55799a
+#window.active.button.hover.bg.border.color: #3d4c5a
+#window.active.button.hover.image.color: #ffffff
+
+window.active.button.toggled.unpressed.bg: Raised Solid Bevel
+window.active.button.toggled.unpressed.bg.color: #d4d0c8
+#window.active.button.toggled.unpressed.bg.colorTo: #55799a
+window.active.button.toggled.unpressed.bg.border.color: #ffffff
+window.active.button.toggled.unpressed.image.color: #000000
+
+window.active.button.toggled.pressed.bg: Raised Solid Sunken
+window.active.button.toggled.pressed.bg.color: #d4d0c8
+#window.active.button.toggled.pressed.bg.colorTo: #50708e
+window.active.button.toggled.pressed.bg.border.color: #ffffff
+window.active.button.toggled.pressed.image.color: #000000
+
+#window.active.button.toggled.hover.bg: Flat Gradient Vertical Border
+#window.active.button.toggled.hover.bg.color: #6993b9
+#window.active.button.toggled.hover.bg.colorTo: #55799a
+#window.active.button.toggled.hover.bg.border.color: #3d4c5a
+#window.active.button.toggled.hover.image.color: #ffffff
+
+# Inactive windows
+window.inactive.title.bg: Flat Gradient Horizontal
+window.inactive.title.bg.color: #808080
+window.inactive.title.bg.colorTo: #c0c0c0
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #d4d0c8
+
+window.inactive.handle.bg: Solid Raised
+window.inactive.handle.bg.color: #404040
+#window.inactive.handle.bg.colorTo: #4d6982
+
+window.inactive.grip.bg: Solid Flat
+window.inactive.grip.bg.color: #808080
+#window.inactive.grip.bg.colorTo: #4d6982
+
+window.inactive.button.unpressed.bg: Raised Solid Bevel
+window.inactive.button.unpressed.bg.color: #d4d0c8
+#window.inactive.button.unpressed.bg.colorTo: #55799a
+window.inactive.button.unpressed.bg.border.color: #ffffff
+window.inactive.button.unpressed.image.color: #000000
+
+window.inactive.button.pressed.bg: Raised Solid Sunken
+window.inactive.button.pressed.bg.color: #d4d0c8
+#window.inactive.button.pressed.bg.colorTo: #50708e
+window.inactive.button.pressed.bg.border.color: #404040
+window.inactive.button.pressed.image.color: #000000
+
+window.inactive.button.disabled.bg: Raised Solid Bevel
+window.inactive.button.disabled.bg.color: #d4d0c8
+#window.inactive.button.disabled.bg.colorTo: #50708e
+window.inactive.button.disabled.bg.border.color: #ffffff
+window.inactive.button.disabled.image.color: #808080
+
+#window.inactive.button.hover.bg: Flat Gradient Vertical Border
+#window.inactive.button.hover.bg.color: #6993b9
+#window.inactive.button.hover.bg.colorTo: #55799a
+#window.inactive.button.hover.bg.border.color: #3d4c5a
+#window.inactive.button.hover.image.color: #ffffff
+
+window.inactive.button.toggled.unpressed.bg: Raised Solid Bevel
+window.inactive.button.toggled.unpressed.bg.color: #d4d0c8
+#window.inactive.button.toggled.unpressed.bg.colorTo: #55799a
+window.inactive.button.toggled.unpressed.bg.border.color: #ffffff
+window.inactive.button.toggled.unpressed.image.color: #000000
+
+window.inactive.button.toggled.pressed.bg: Raised Solid Sunken
+window.inactive.button.toggled.pressed.bg.color: #d4d0c8
+#window.inactive.button.toggled.pressed.bg.colorTo: #50708e
+window.inactive.button.toggled.pressed.bg.border.color: #ffffff
+window.inactive.button.toggled.pressed.image.color: #000000
+
+#window.inactive.button.toggled.hover.bg: Flat Gradient Vertical Border
+#window.inactive.button.toggled.hover.bg.color: #6993b9
+#window.inactive.button.toggled.hover.bg.colorTo: #55799a
+#window.inactive.button.toggled.hover.bg.border.color: #3d4c5a
+#window.inactive.button.toggled.hover.image.color: #ffffff
+
+# Menus
+menu.title.bg: Solid Flat
+menu.title.bg.color: #d4d0c8
+#menu.title.bg.colorTo: #4d6982
+menu.title.text.color: #000000
+menu.title.text.justify: Left
+menu.separator.color: #808080
+menu.separator.width: 1
+menu.separator.padding.width: 2
+menu.separator.padding.height: 4
+
+menu.items.bg: Flat Solid
+menu.items.bg.color: #d4d0c8
+menu.items.text.color: #000000
+menu.items.disabled.text.color: #808080
+
+menu.items.active.bg: Flat Solid
+menu.items.active.bg.color: #0a246a
+#menu.items.active.bg.colorTo: #50708d
+menu.items.active.text.color: #ffffff
+menu.items.active.disabled.text.color: #d4d0c8
