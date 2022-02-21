@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Windows Update
+Exec=muon
+Icon=system-software-update
+Type=Application
+X-DocPath=muon/index.html
+GenericName=Package Manager
+Categories=Qt;KDE;System;
+X-KDE-Keywords=program,software,repository,archive,package,install,remove,update,deb

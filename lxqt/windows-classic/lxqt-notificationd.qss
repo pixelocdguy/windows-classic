@@ -1,0 +1,23 @@
+Notification {
+    color: black;
+    border: 1px solid black;
+    background:rgba(255, 255, 225, 100%);    
+}
+
+QLabel {
+    color: #black;
+}
+
+#closeButton {
+    border: 2px solid transparent;
+    border-image: url(border.png) 2px;
+}
+
+#closeButton:pressed {
+	border: 2px solid transparent;
+    border-image: url(border-inverse.png) 2px;
+}
+
+#appLabel {
+    font-weight: bold;
+}

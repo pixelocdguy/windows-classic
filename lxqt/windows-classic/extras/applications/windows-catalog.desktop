@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Windows Catalog
+MimeType=application/vnd.debian.binary-package;application/vnd.flatpak;application/vnd.flatpak.repo;application/vnd.flatpak.ref;
+Exec=plasma-discover %F
+Icon=softwarecenter
+Type=Application
+X-DocPath=plasma-discover/index.html
+InitialPreference=5
+NoDisplay=false
+Actions=Updates;
+GenericName=Software Center
+Categories=Qt;KDE;System;
+Keywords=program;software;repository;package;install;remove;update;apps;applications;
+
+[Desktop Action Updates]
+Name=See Available Updates
+Icon=update-low
+Exec=plasma-discover --mode update

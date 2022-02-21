@@ -1,0 +1,473 @@
+/*This is part of the Windows Classic theme for the LXQT Panel.*/
+
+/*
+ * General panel settings
+ */
+
+/* This makes the Panel [Taskbar] look like Windows Classic style*/
+LXQtPanel #BackgroundWidget {
+    background: rgba(212, 208, 200, 100%);
+    border-top: 2px solid transparent;
+    border-image: url(lxqt-panel/border-top-taskbar.png) 2;
+    padding: 2px;
+}
+
+/* Matches tooltips to Windows Classic style. */
+QToolTip {    
+    border: 1px solid rgba(0, 0, 0, 100%);
+    background: rgba(255, 255, 225, 100%);
+    padding: 0px;
+    margin: 0px;
+    color: #000000;
+}
+
+
+/* This makes the taskbar right click menu headers look "normal". */
+QMenu QToolButton {
+    font: bold;
+	/*padding and border guarantee that it won't be drawn by widget style*/
+	padding: 0px;
+	border: none;	
+}
+
+/*
+ * Main menu / Windows "Start Menu".
+ */
+
+
+/* The Start Button    
+Unfortuantely this button does not track it's "checked" state so we cannot make this appear to stay down/pressed when the menu is displayed.
+This would require changes to the source code... a future possibility for a patch*/
+
+#MainMenu {
+    border: 2px solid transparent;
+    border-image: url(border.png) 2px;
+    qproperty-icon: url(lxqt-panel/start-icon-xp.png);
+    font: bold;
+    /*Unfortunately the below QSS doesn't work as there is no way to determine when the button is unchecked if clicking elsewhere to close the menu*/
+    /*qproperty-checkable: true;    */
+    }
+
+#MainMenu:!pressed {
+	padding-right: -6px;
+}
+
+#MainMenu:pressed {
+	border: 2px solid transparent;
+    border-image: url(border-inverse.png) 2px;
+    /*As above*/
+    /*qproperty-checked: true;*/
+}
+
+/*Ditto*/
+/*
+#MainMenu:checked {
+	border: 2px solid transparent;
+    border-image: url(lxqt-panel/border-inverse.png) 2px;
+}*/
+
+/* Top Level Start Menu */
+
+#TopLevelMainMenu {	
+	min-height: 320px;
+    min-width: 200px;
+    font-weight: normal;
+	
+	/* Doesn't work unless the menu item is not styled. Not sure if this is a bug in Qt, or LXQt hard-coded, or both. */
+	/* Currently this works to add extra padding until a fix is found. */
+	icon-size: 32px;	
+		
+	/* Doesn't work without creating a right hand margin, most likely a bug in Qt.
+	 * Current work around is to set a margin on each child Menu Action
+	padding-left: 23px;
+	*/
+	padding-left: 1px;
+	padding-right: 1px;
+	
+	/*Set this to ...win2k or winme to change the left hand Start Menu banner graphic to Windows 2K or ME instead.*/
+	background-image: url(lxqt-panel/start-banner-winxp.png); 
+	background-repeat: no-repeat;		
+	background-position: bottom left;
+}
+
+
+#TopLevelMainMenu::item {
+	border: 1px solid transparent;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 8px;
+    
+    /*This is 20 instead of 21px as setting so the selection highlight touchs the banner the same on on actual Windows.*/
+    margin-left: 20px;
+	}
+
+#TopLevelMainMenu::separator {
+	/*Ensures a 1px left hand margin for aesthetic purposes.*/
+	margin-left: 21px;	
+	}
+
+/*
+ * Main Menu Search Field
+ * Windows XP/2k/ME does not have a Start Search, instead they have a "Run..." applet.
+ * As the LXQt Search is hard coded, we have made this look similar to Windows Vista "Classic theme"
+ * and omitted the "Runner" plugin as this would be duplicate functionality.
+ */
+#MainMenu QLineEdit {
+	font: italic;
+	qproperty-placeholderText: "Start Search";	
+	margin-left: 21px;	
+	}	
+
+/* This section styles the BOTH the Top Level & Sub-Menus of the Start Menu. */
+
+#MainMenu QMenu {
+	border: 2px solid transparent;
+    border-image: url(lxqt-panel/border-transparent-fill.png) 2px;
+    background-color: #D4D0C8;
+    color: black; /* Text color */    
+    font-weight: normal;
+}
+
+#MainMenu QMenu::item:selected {
+	color: white; /* Text color */
+	background-color: #0A246A;
+}
+
+
+/* This is the Search View */
+
+/* This makes sure the start menu isn't too small, so it shows the left banner nicely. */
+#MainMenu ActionView {
+	min-height: 256px;
+	min-width: 200px;
+	margin-left: 21px;
+	background: white;
+}
+
+
+/*
+ * Spacer
+ * Use this if you've customised the Windows Classic theme to look like Windows 2k or ME. XP only used spacers if the Taskbar was "unlocked".
+ */
+
+#Spacer {
+    background-position: center center;
+}
+
+#Spacer[type="lined"] {
+    background-image: url(lxqt-panel/spacer-line.png);
+}
+
+#Spacer[type="dotted"] {
+    background-image: url(lxqt-panel/spacer-dots.png);
+ }
+
+#Spacer[orientation="horizontal"] {
+    background-repeat: repeat-y;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 3px;
+}
+
+#Spacer[orientation="vertical"] {
+    background-repeat: repeat-x;
+    margin-top: 3px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/*
+ * ShowDesktop
+ */
+
+#ShowDesktop {
+    margin-left: 3px;    
+}
+
+
+/*
+ * QuickLaunch
+ * 
+ * IF YOU DO NOT HAVE THE "SHOW DESKTOP" WIDGET TO THE LEFT OF QUICKLAUNCH, UNCOMMENT THIS SELECTOR.
+ * Otherwise, you will have a 6px margin instead of the correct 3px. 
+ */
+
+/*
+#QuickLaunch {
+    margin-left: 3px;    
+}
+*/
+
+/*
+ * Desktopswitch
+ */
+
+#DesktopSwitch QToolButton{
+    margin-left: 3px;
+    min-width: 16px;
+    min-heigh: 16px;
+}
+
+#DesktopSwitch QToolButton[urgent="true"] {
+    color: palette(highlighted-text);
+    background: palette(highlight);
+}
+
+/*
+ * TaskBar
+ */
+
+/* Space TaskBar window buttons as per Windows. */
+#TaskBar QToolButton{
+    margin-left: 3px;
+}
+
+/*
+ * Status Notifier
+ *
+ * This ensures the status buttons have a border above/below and do not display a button border on hover/press as per the Windows System Tray.
+ * ***This needs to be in the middle of the Tray / Clock***
+ */
+ 
+#StatusNotifierPlugin {
+    min-height: 20px;    
+    min-width: 2px;
+    border-left: 1px solid transparent; /*If we set this to 0, wierd things happen to the whole border. Hence the right margin hack below*/
+    border-top: 1px solid transparent; 
+    border-right: 1px solid transparent;   
+    border-bottom: 1px solid transparent;
+    border-image: url(lxqt-panel/border-tray-left.png);
+    margin-left: 0px;
+    margin-right: -2px; /*Cancel's out above right hand border*/
+    padding-left: 1px;    
+}
+
+#StatusNotifierPlugin QToolButton {
+	border: 0px;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;    
+}
+
+
+/*
+ * Mount plugin
+ */
+ 
+
+#LXQtMountPlugin {			
+	border-top: 1px solid #848284;
+    border-bottom: 1px solid white;    
+    padding: 0px;
+    margin-right: -1px;    
+}
+
+#LXQtMountPlugin QToolButton {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+       
+    /*Icon is set by Icon Theme... uncomment this if you'd like to use your own that matches Windows better.*/
+    /*qproperty-icon: url(lxqt-panel/eject.png);*/
+}
+
+
+#LXQtMountPopup {
+	border: 2px solid transparent;
+	border-image: url(border.png);	
+	padding: 0px;
+	margin: 0px;	
+    }
+
+#LXQtMountPopup > MenuDiskItem {	
+	min-height: 16px;
+	min-width: 256px;
+	padding: 0px;
+	margin: 2px;	
+}
+
+#LXQtMountPopup #DiskButton {
+	border: 1px solid transparent;
+
+	qproperty-iconSize: 16px;
+	
+	padding: 0px;
+	margin: 0px;
+}
+
+
+#LXQtMountPopup #DiskButton:hover {
+ 	color: white;
+	background-color: #0A246A;   
+}
+
+#LXQtMountPopup #EjectButton {
+	border: 1px solid transparent;
+	
+	qproperty-iconSize: 16px;
+	
+	padding: 0px;
+	margin: 0px;
+}
+
+#LXQtMountPopup #EjectButton:hover {
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid #848284;
+	border-bottom: 1px solid #848284;	
+}
+
+#LXQtMountPopup #EjectButton:pressed {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-top: 1px solid #848284;
+	border-left: 1px solid #848284;
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+
+#LXQtMountPopup #NoDiskLabel {
+	border: 2px solid transparent;
+	border-image: url(border.png);
+    min-width: 256px;
+    min-height: 16px;
+    padding: 0px 16px;
+}
+
+/*
+ * Volume plugin
+ */
+
+/* As per System Notifier plugin. If you move this to the far left for example, you'll need to add a left border. */
+#VolumePlugin QToolButton {    
+    border-top: 1px solid #848284;    
+    border-bottom: 1px solid white;
+    padding: 0px;
+    margin-left: -1px;
+    margin-right: -2px; 
+}
+
+VolumePopup {
+    border: 2px solid transparent;
+    border-image: url(border.png) 2px;
+    
+    min-width: 80px;
+    min-height: 150px;
+}
+
+/*
+ * This is the Mixer link on the Volume Popup.
+ * Windows doesn't have this so we've styled this as a "Volume" title.
+ * However, you can still click on it to open the Mixer.
+ */
+QPushButton#MixerLink {	
+	width: 60px;
+	height: 20px;
+	
+	border: none;
+	background: transparent;
+		
+	qproperty-text: "Volume";
+	qproperty-icon: unset;
+	
+	margin: 8px;
+}
+
+
+VolumePopup QPushButton {
+	width: 60px;
+	height: 20px;	
+			
+ 	/* Icon is hard coded so this doesn't work... :( */
+ 	/* Lengthy QSS workaround proceeds below... */
+    /*qproperty-icon: url(lxqt-panel/checkbox-unchecked.png);*/    
+    qproperty-text: "Mute";
+
+	border: none;
+	outline: none;
+	margin: 8px;
+	padding: 2px;
+
+	qproperty-iconSize: 0px; /* Hide the icon, so we can use a background as a fake checkbox. Required due to above icon note. */
+	    
+    background-image: url(lxqt-panel/checkbox-unchecked.png);
+    background-repeat: none;
+    background-position: left;
+}
+
+VolumePopup QPushButton:pressed, VolumePopup QPushButton:checked {
+	background-image: url(lxqt-panel/checkbox-checked.png);
+	background-repeat: none;
+    background-position: left;
+	}
+
+
+/* Icon is hard coded so this doesn't work... :( */
+/*VolumePopup QPushButton:checked {	
+    qproperty-icon: url(lxqt-panel/checkbox-checked.png);
+}*/
+
+
+VolumePopup > QSlider {
+    width: 56px;
+    height: 66px;
+
+}
+
+VolumePopup > QSlider::groove:vertical {
+    width: 56px;
+    height: 66px;
+    margin-left: -16px;
+    margin-right: -16px;
+    background-image: url(lxqt-panel/volume-slider.png);
+}
+
+
+VolumePopup > QSlider::handle:vertical {
+	width: 21px;
+	height: 11px;
+	
+	margin: 0px 17px;
+	
+	border: 2px solid transparent;
+    border-image: url(border.png) 2px;
+    
+    background-color: #D4D0C8;
+}
+
+/*
+ * WorldClock
+ */
+
+#WorldClockContent {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-right: 16px;    
+    border-left: 1px solid transparent; /*If we set this to 0, wierd things happen to the whole border. Hence the left margin hack below*/
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: url(lxqt-panel/border-tray-right.png); 
+    margin-left: -1px; /*Cancel's out above left hand border*/
+    background: purple;
+}
+
+/*
+ * Calendar Widget
+ */
+
+#WorldClockCalendar {
+
+}
+
+#WorldClockCalendar QToolButton:hover {
+	background: #0c2c7d;
+	color: white;	
+}
+	
+#WorldClockCalendar QToolButton:pressed {
+	background: #081c4f;
+	color: white;	
+}

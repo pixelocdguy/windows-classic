@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Set Program Access and Defaults
+GenericName=Set Program Access and Defaults
+Comment=Set Assocations and Default Applications via File Associations program
+Exec=lxqt-config-file-associations
+MimeType=inode/directory;
+Icon=preferences-system
+Categories=FileManager;Utility;Core;Qt;
+StartupNotify=true

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=For People...
+GenericName=For People...
+Comment=Search for People via the Thunderbird Address Book
+Exec=thunderbird -addressbook
+MimeType=inode/directory;
+Icon=thunderbird
+Categories=Internet;Core;
+StartupNotify=true

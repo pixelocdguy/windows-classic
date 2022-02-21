@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=For Files or Folders...
+GenericName=For Files or Folders...
+Comment=Search Files via PCManFM
+Exec=pcmanfm-qt -f
+MimeType=inode/directory;
+Icon=filefind
+Categories=FileManager;Utility;Core;Qt;
+StartupNotify=true

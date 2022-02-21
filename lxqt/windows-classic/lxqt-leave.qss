@@ -1,0 +1,4 @@
+#LeaveDialog {
+	border: 2px solid transparent;
+	border-image: url(border.png) 2;
+}

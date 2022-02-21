@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Internet Explorer
+GenericName=Web Browser
+Comment=Open your default Web Browser
+Exec=x-www-browser
+Icon=web-browser
+Categories=Applications
+StartupNotify=true
+Terminal=false

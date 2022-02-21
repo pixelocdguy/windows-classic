@@ -1,0 +1,15 @@
+#panel {
+	border: 2px solid transparent;
+	border-image: url(border.png) 2px;
+}
+
+
+#commandList {
+	border-top: 4px;
+	border-right: 4px;
+	border-bottom: 4px;
+	border-left: 4px;
+	border-style: solid;
+	border-color: transparent;
+	border-image: url(lxqt-runner/border-inverse-border.png);	
+}
