@@ -1,0 +1,3 @@
+Copy the 'windows-classic' folder to:
+
+~/.local/share/aurorae/themes/
