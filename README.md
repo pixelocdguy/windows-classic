@@ -14,3 +14,8 @@ Possible future additions are:
 - Plymouth theme (boot splash screen)
 
 This was created as there didn't appear to be a Windows Classic theme for LXQt. Additionally, due to Qt's (cross platform app framework) relatively accurate built-in Windows widget style, it seemed as waste to not take advantage of this. Regardless, it wasn't as easy as first predicted, due to peculiarities in both LXQt and Qt.
+
+### Screenshots
+
+![Screenshot 1](/screenshots/screenshot1.png)
+![Screenshot 2](/screenshots/screenshot2.png)
